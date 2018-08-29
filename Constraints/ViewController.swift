@@ -117,7 +117,7 @@ class ViewController: UIViewController
                     self.lambdaLogoImageView.alpha = 0
                     label.frame.origin.x = CGFloat(self.generateRandomNumber(min: 0, max: Int(self.view.frame.maxX) - 20))
                     label.frame.origin.y = CGFloat(self.generateRandomNumber(min: 80, max: Int(self.view.frame.maxY) - 20))
-                    label.backgroundColor = backgroundColor
+                    label.layer.backgroundColor = backgroundColor.cgColor
                     label.textColor = textColor
                     label.transform = CGAffineTransform(rotationAngle: CGFloat.pi / rotationValue)
 //                    print(label.frame)
@@ -136,7 +136,7 @@ class ViewController: UIViewController
                     label.transform = .identity
                     label.frame = self.getOriginalFrame(label.tag)
                     label.textColor = .black
-                    label.backgroundColor = .clear
+                    label.layer.backgroundColor = UIColor.clear.cgColor
                 }
             }
             
